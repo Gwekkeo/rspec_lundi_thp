@@ -1,10 +1,16 @@
-#write your code here
+# Rule 1: If a word begins with a vowel sound, add an "ay" sound to the end of the word.
+#
+# Rule 2: If a word begins with a consonant sound, move it to the end of the word, and 
+#then add an "ay" sound to the end of the word.
+
 def translate(str)
 	voyelle = ["a","e","i","o","u","y"]
 	strCon = ""
 	tabMot = str.split()
 	tabReturn = []
-	
+
+
+	#TRADUIS 2 MOTS OU PLUS
 	if str.split().length > 1
 		tabMot.each do |mot|
 			mot = translate(mot)
@@ -14,17 +20,18 @@ def translate(str)
 		return tabReturn.join(" ")
 	end
 
+	# TRADUIS MOT COMMENCANT PAR VOYELLE
 	if voyelle.include?(str[0])
 		return str+"ay"
+	# TRADUIS MOT COMMENCANT PAR CONSONNE
 	else
 		str.length.times do |i|
 			print "#{str[i]} "
 			if !voyelle.include?(str[i])
 				strCon += str[i]
-
-				# puts "voyelle"	
-			else
 				# puts "CONSONNE!"
+			else
+				# puts "voyelle"	
 				# puts "STR[#{i}] = #{str[i]}"
 				if str[i-1]=="q" && str[i] == "u"
 					strCon += str[i]

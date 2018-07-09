@@ -1,12 +1,14 @@
-#write your code here
+# ECRIRE
 def echo(str)
 	return str
 end
 
+# MISE EN MAJUSCULE
 def shout(str)
 	return str.upcase
 end
 
+# REPETER ( AU MOINS 2 FOIS)
 def repeat(str, nb=0)
 	strBase = str
 	if nb < 1
@@ -20,14 +22,17 @@ def repeat(str, nb=0)
 	return str
 end
 
-def start_of_word(str, index)
-	return str[0,index]
+# AVOIR LES x PREMIERES LETTRES
+def start_of_word(str, number)
+	return str[0, number]
 end
 
+# AVOIR LE PREMIER MOT
 def first_word(str)
 	return str.split[0]
 end
 
+# METTRE EN CAPITALE
 def titleize(str)
 	wordLittle = ["and", "the"]
 

@@ -1,27 +1,19 @@
-#write your code here
-def time_string(timeSec)
-	heure = timeSec / 3600
-	minute = (timeSec%3600)/60
-	seconde = (timeSec%60)%60
+# AFFICHER L'HEURE 	hh:mm:ss
+# LE PARAMETRE sec EST EN SECONDE
 
-	if heure < 10
-		heureS = "0"+heure.to_s
-	else
-		heureS = heure.to_s
-	end
-	if minute < 10
-		minuteS = "0"+minute.to_s
-	else
-		minuteS = minute.to_s
-	end
-	if seconde < 10
-		secondeS = "0"+seconde.to_s
-	else
-		secondeS = seconde.to_s
-	end
-	puts "HEURE: #{heureS}"
-	puts "MINUTES: #{minuteS}"
-	puts "SECONDE: #{secondeS}"
+def time_string(sec)
+    heure = (sec/3600)
+    min = (sec%3600)/60
+    sec = (sec%3600)%60
 
-	return "#{heureS}:#{minuteS}:#{secondeS}"
+    if heure<10
+        heure = "0#{heure}"
+    end
+    if min<10
+        min = "0#{min}"
+    end
+    if sec<10
+        sec = "0#{sec}"
+    end
+    "#{heure}:#{min}:#{sec}"
 end

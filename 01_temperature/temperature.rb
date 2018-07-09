@@ -1,8 +1,9 @@
-#write your code here
+# farenheit TO celcius
 def ftoc(faren)
-	(faren-32)*5/9
+	return (faren-32)*5/9
 end
 
+# celcius TO farenheit
 def ctof(celc)
-	(celc*9.0/5) +32
+	return (celc*9.0/5) +32
 end
