@@ -14,7 +14,6 @@ def translate(str)
 	if str.split().length > 1
 		tabMot.each do |mot|
 			mot = translate(mot)
-			puts mot
 			tabReturn << mot
 		end
 		return tabReturn.join(" ")
@@ -26,7 +25,6 @@ def translate(str)
 	# TRADUIS MOT COMMENCANT PAR CONSONNE
 	else
 		str.length.times do |i|
-			print "#{str[i]} "
 			if !voyelle.include?(str[i])
 				strCon += str[i]
 				# puts "CONSONNE!"
